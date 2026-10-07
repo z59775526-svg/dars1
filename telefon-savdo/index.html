@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltPhone — Smartphone Store | Магазин смартфонов</title>
+  <meta name="description" content="VoltPhone — online smartphone store. Original devices, official warranty, 24h delivery. Оригинальные смартфоны с гарантией." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%23ff3b5c'/><path d='M13 3 5 13.5h5L8.8 21l8.2-10.5h-5L13 3z' fill='white'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌊 Liquid background -->
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- 🧭 Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </span>
+        <span class="logo-word">Volt<em>Phone</em></span>
+      </a>
+      <nav class="nav">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#catalog" data-i18n="nav.catalog">Catalog</a>
+        <a href="#features" data-i18n="nav.features">Why us</a>
+        <a href="#contacts" data-i18n="nav.contacts">Contacts</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language / Язык">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        </div>
+        <button class="cart-btn" id="cartBtn" type="button" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🚀 Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge reveal"><span class="dot"></span><span data-i18n="hero.badge">New arrivals · 2026</span></span>
+        <h1 class="reveal">
+          <span data-i18n="hero.title">Smartphones that move at the speed of</span>
+          <span class="accent" data-i18n="hero.titleAccent">your life</span>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="hero.sub">Flagship power at a fair price. Original devices with official warranty — delivered to your door within 24 hours.</p>
+        <div class="hero-ctas reveal">
+          <a href="#catalog" class="btn btn-primary">
+            <span data-i18n="hero.cta1">Shop now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#catalog" class="btn btn-glass" data-i18n="hero.cta2">Browse catalog</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><b>120+</b><span data-i18n="hero.stat1">models in stock</span></div>
+          <div class="stat"><b>4.9</b><span data-i18n="hero.stat2">average rating</span></div>
+          <div class="stat"><b>24/7</b><span data-i18n="hero.stat3">customer support</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-glow"></div>
+        <div class="hero-phone">
+          <div class="phone-screen">
+            <span class="phone-notch"></span>
+            <span class="phone-glare"></span>
+            <div class="phone-clock" id="phoneTime">--:--</div>
+            <div class="phone-date" id="phoneDate"></div>
+          </div>
+        </div>
+        <div class="float-chip chip-price">
+          <b>$999</b>
+          <small data-i18n="hero.chip1sub">iPhone 15 Pro</small>
+        </div>
+        <div class="float-chip chip-rating">
+          <svg viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.9 5.99 19.7l1.5-6.48-5-4.4 6.6-.56L12 2z"/></svg>
+          <div><b>4.9</b><small data-i18n="hero.chip2sub">2,400+ reviews</small></div>
+        </div>
+        <div class="float-chip chip-sale">
+          <b>-10%</b>
+          <small data-i18n="hero.chip3sub">on your first order</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎵 Brand ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Google</span>
+        <span>Honor</span><span>OnePlus</span><span>Nothing</span><span>Motorola</span>
+      </div>
+      <div class="ticker-group">
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Google</span>
+        <span>Honor</span><span>OnePlus</span><span>Nothing</span><span>Motorola</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Catalog -->
+  <section id="catalog">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="catalog.title">Our catalog</h2>
+        <p data-i18n="catalog.sub">Pick your next smartphone — filter by brand</p>
+      </div>
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all" type="button">All brands</button>
+        <button class="filter-btn" data-filter="apple" type="button">Apple</button>
+        <button class="filter-btn" data-filter="samsung" type="button">Samsung</button>
+        <button class="filter-btn" data-filter="xiaomi" type="button">Xiaomi</button>
+        <button class="filter-btn" data-filter="google" type="button">Google</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ⭐ Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="features.title">Why shop with us</h2>
+        <p data-i18n="features.sub">We make buying a smartphone simple, safe and fast</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v8H2z"/><path d="M13 10h3.5l2.5 3v2h-6"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/></svg>
+          </div>
+          <h3 data-i18n="feat1.title">Delivery in 24 hours</h3>
+          <p data-i18n="feat1.text">Free courier delivery across the city on every order.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.4c0 4.3-2.9 7.3-7 8.8-4.1-1.5-7-4.5-7-8.8V5.8L12 3z"/><path d="M9 11.6l2.1 2.1 4-4.2"/></svg>
+          </div>
+          <h3 data-i18n="feat2.title">Official warranty</h3>
+          <p data-i18n="feat2.text">2-year official warranty on every device we sell.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <h3 data-i18n="feat3.title">Trade-in</h3>
+          <p data-i18n="feat3.text">Exchange your old phone and get an instant discount.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <h3 data-i18n="feat4.title">Support 24/7</h3>
+          <p data-i18n="feat4.text">Our team is always online to help you choose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎁 Promo CTA -->
+  <section class="cta-section" id="promo">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 data-i18n="cta.title">Get 10% off your first order</h2>
+        <p data-i18n="cta.text">Use the promo code at checkout — it works on all smartphones.</p>
+        <button class="promo-chip" id="promoChip" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-i18n="cta.code">Promo code: VOLT10</span>
+        </button>
+        <div>
+          <a href="#catalog" class="btn btn-primary" data-i18n="cta.btn">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🦶 Footer -->
+  <footer id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#home" class="logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            <span class="logo-word">Volt<em>Phone</em></span>
+          </a>
+          <p data-i18n="footer.about">VoltPhone is an online smartphone store. Original devices, fair prices and delivery across the whole country.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.navTitle">Navigation</h4>
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#catalog" data-i18n="nav.catalog">Catalog</a>
+          <a href="#features" data-i18n="nav.features">Why us</a>
+          <a href="#contacts" data-i18n="nav.contacts">Contacts</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contactsTitle">Contacts</h4>
+          <a href="tel:+998712000000">+998 71 200 00 00</a>
+          <a href="mailto:hello@voltphone.uz">hello@voltphone.uz</a>
+          <p class="footer-addr" data-i18n="footer.address">Tashkent, Amir Temur ave. 108</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> VoltPhone. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <span>voltphone.uz</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🔔 Toast -->
+  <div class="toast" id="toast" role="status">
+    <span class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </span>
+    <span id="toastMsg"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
